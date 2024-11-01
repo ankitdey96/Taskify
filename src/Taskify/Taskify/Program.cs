@@ -42,7 +42,17 @@ try
     builder.Services.AddIdentity();
     builder.Services.AddJwtAuthentication(builder.Configuration["Jwt:Key"], builder.Configuration["Jwt:Issuer"],
         builder.Configuration["Jwt:Audience"]);
-
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowSites",
+            builder =>
+            {
+                //builder.WithOrigins("https://localhost:7076", "http://localhost", "http://localhost:4200")
+                builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+            });
+    });
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
@@ -58,7 +68,7 @@ try
     }
 
     app.UseHttpsRedirection();
-
+    app.UseCors("AllowSites");
     app.UseAuthorization();
 
     app.MapControllers();

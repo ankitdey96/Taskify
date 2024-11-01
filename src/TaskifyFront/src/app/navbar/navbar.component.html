@@ -2,8 +2,13 @@
     <div class="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <app-logo/>
         <div class="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
-            <button>Log In</button>
+            <button (click)="navigateToLogin()" routerLinkActive="active" ariaCurrentWhenActive="page">Log In</button>
             <button>Sign Up</button>
         </div>
     </div>
 </div>
+<!-- <div class="h-full bg-slate-100">
+    <main class="pt-40 pb-20 bg-slate-100">
+        <router-outlet></router-outlet> 
+    </main>
+</div> -->
