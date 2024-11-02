@@ -1,10 +1,34 @@
+
 <div class="fixed top-0 w-full h-14 px-4 border-b shadow-sm bg-white flex items-center">
     <div class="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <app-logo/>
-        <div class="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
-            <button (click)="navigateToLogin()" routerLinkActive="active" ariaCurrentWhenActive="page">Log In</button>
-            <button>Sign Up</button>
-        </div>
+        @if (IsLoggedIn()) {
+            <div>
+                <div class="relative group">
+                    <div class="flex items-center space-x-3 cursor-pointer">
+                      <span class="text-white font-medium">Hi, Test</span>
+                      <!-- Profile Initial Circle with User's Initial -->
+                      <div class="w-10 h-10 bg-purple-700 text-white rounded-full flex items-center justify-center font-semibold">
+                        <!-- {{ userInitial }} -->
+                          A
+                      </div>
+                    </div>
+                
+                    <!-- Dropdown menu (optional) -->
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                    </div>
+                  </div>
+            </div>
+        }
+        @else {
+            <div class="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
+                <button (click)="navigateToLogin()" routerLinkActive="active" ariaCurrentWhenActive="page">Log In</button>
+                <button>Sign Up</button>
+            </div>
+        }
     </div>
 </div>
 <!-- <div class="h-full bg-slate-100">

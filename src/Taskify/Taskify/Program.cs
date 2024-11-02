@@ -47,8 +47,8 @@ try
         options.AddPolicy("AllowSites",
             builder =>
             {
-                //builder.WithOrigins("https://localhost:7076", "http://localhost", "http://localhost:4200")
-                builder.AllowAnyOrigin()
+                builder.WithOrigins("https://localhost:7076", "http://localhost", "http://localhost:4200")
+                //builder.AllowAnyOrigin()
                    .AllowAnyMethod()
                    .AllowAnyHeader();
             });
