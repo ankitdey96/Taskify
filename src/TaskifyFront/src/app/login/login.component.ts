@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         const message = response.isSuccess ? 'Login Successfully' : response.error;
         this.notificationservice.showMessage(message);
         if (response.isSuccess) {
-          this.route.navigateByUrl('/');
+          this.route.navigateByUrl('/workspaces');
         }
       },
       error: (err) => {
@@ -45,6 +45,8 @@ export class LoginComponent implements OnInit {
     });
     
   }
+
+  
 
  
 

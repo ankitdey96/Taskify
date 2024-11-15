@@ -1,0 +1,55 @@
+<main class="pt-20 md:pt-24 px-4 mx-w-6xl 2xl: max-w-screen-xl mx-auto">
+    <div class="flex gap-x-7">
+        <div class="w-64 shrink-0 hidden md:block">
+            <!-- sidebar -->
+             <div class="font-medium text-xs flex items-center mb-1">
+                <span class="pl-4 text-2xl">
+                    Workspaces
+                </span>
+                <button class="ml-auto  bg-black text-white font-bold py-2 px-4 "
+                    aria-label="Add workspace">
+                    +                
+                </button>
+            </div>
+            <app-sidebar/>
+        </div>
+
+        <div class="p-8 flex items-center gap-x-4 ">
+          <div class="bg-white shadow-md rounded-lg p-6 w-[1000px]">
+            <!-- Workspace Header -->
+            <div class="flex items-center space-x-4">
+              <!-- Workspace Icon -->
+              <div class="bg-gradient-to-r from-green-400 to-blue-500 w-12 h-12 rounded-md flex items-center justify-center">
+                <span class="text-white text-lg font-bold">T</span>
+              </div>
+              <!-- Workspace Name and Edit Icon -->
+              <div class="flex-grow">
+                <div class="flex items-center">
+                  <span class="text-lg font-semibold">Trello Workspace</span>
+                  <button mat-icon-button class="ml-2">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                </div>
+                <!-- Privacy Setting -->
+                <div class="flex items-center text-sm text-gray-500">
+                  <mat-icon>lock</mat-icon>
+                  <span class="ml-1">Private</span>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Divider Line -->
+            <div class="border-t border-gray-300 my-4 w-full"></div>
+        
+            <!-- Your Boards Section -->
+            <div class="flex items-center text-gray-600 font-semibold">
+              <mat-icon>person</mat-icon>
+              <span class="ml-2">Your boards</span>
+            </div>
+          </div>
+        </div>
+        
+        
+    </div>
+
+</main>
