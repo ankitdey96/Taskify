@@ -1,0 +1,34 @@
+<div id="popover"class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+  <div class="bg-white p-6 w-80 rounded-lg shadow-lg relative">
+    <!-- Popover Header -->
+    <div class="flex justify-between items-center border-b pb-2 mb-4">
+      <h3 class="text-lg font-semibold">Create Board</h3>
+      <button class="text-gray-500 hover:text-gray-700 focus:outline-none"  (click)="ClosePopover()">
+        &times;
+      </button>
+    </div>
+
+    <!-- Popover Content -->
+    <div>
+      <label for="boardTitle" class="block text-sm font-medium text-gray-700">
+        Board title
+      </label>
+      <input
+        type="text"
+        id="boardTitle"
+        class="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+        placeholder="Enter board title"
+      />
+    </div>
+
+    <!-- Popover Footer -->
+    <div class="mt-4">
+      <button
+        type="button"
+        class="w-full py-2 bg-black text-white rounded-md hover:bg-gray-800"
+      >
+        Create
+      </button>
+    </div>
+  </div>
+</div>

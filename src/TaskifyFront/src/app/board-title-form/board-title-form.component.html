@@ -1,0 +1,15 @@
+
+
+@if (IsEditing) {
+    <form class="flex items-center gap-x-2" (submit)="OnSubmit()">
+        <input onblur=""
+        value="BoardName"
+        class="text-lg font-bold px-[7px] py-1 h-7 bg-transparent focus-visible:outline-none focus-visible:ring-transparent border-s-violet-100 border-2 border-r-2"
+        autofocus
+        />
+    </form>
+}
+@else {
+    <button class="font-bold text-lg h-auto w-auto p-1 px-2 bg-transparent text-white hover:bg-white/20" (click)="ButtonEditing()">{{BoardName}}</button>
+
+}

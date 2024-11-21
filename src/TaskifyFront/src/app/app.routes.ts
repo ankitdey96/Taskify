@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { WorkSpacesComponent } from './work-spaces/work-spaces.component';
+import { BoardComponent } from './board/board.component';
 
 export const routes: Routes = [
      { path: '', component: HomeComponent   }, // Default route
@@ -13,7 +14,9 @@ export const routes: Routes = [
     {
         path:'workspaces',
         component:WorkSpacesComponent
-    }
+    },
+    { path: 'board/:id', component: BoardComponent }
+
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

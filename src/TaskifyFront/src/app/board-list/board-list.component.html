@@ -1,0 +1,23 @@
+<div class="space-y-4 ">
+    <div class="flex items-center font-semibold text-lg text-neutral-700">
+        <mat-icon>person</mat-icon>
+        <span class="ml-2">Your boards</span>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        @for (item of items; track $index) {
+            <div role="button" (click)="NavigateToBoard(item)" class="aspect-video relative h-full w-full bg-slate-300 rounded-sm flex flex-col gap-y-1 items-center justify-center hover-opacity-75 transition">
+                <p class="relative font-semibold text-black">{{item}}</p>
+            </div>
+        }      
+        <div role="button" (click)="CreateBoard()" class="aspect-video relative h-full w-full bg-slate-300 rounded-sm flex flex-col gap-y-1 items-center justify-center hover-opacity-75 transition">
+            <p class="text-sm">Create New Board</p>
+        </div>
+
+    </div>
+    @if (IsShowPopOver) {
+        <div class="w-72">
+            <app-popover [isVisible]="IsShowPopOver" (PopoverVisible)="VisiblePopOver($event)"/>
+        </div>
+    }
+</div>
