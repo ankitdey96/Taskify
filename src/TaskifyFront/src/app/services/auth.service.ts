@@ -49,7 +49,6 @@ export class AuthService {
   }
 
   IsLoggedIn(){
-    debugger;
     if(!this.GetToken()){
       return false;
     }

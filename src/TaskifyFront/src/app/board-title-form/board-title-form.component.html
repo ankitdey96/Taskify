@@ -1,12 +1,14 @@
 
 
 @if (IsEditing) {
-    <form class="flex items-center gap-x-2" (submit)="OnSubmit()">
-        <input onblur=""
-        value="BoardName"
+    <form  class="flex items-center gap-x-2" (submit)="OnSubmit(boardInput.value)">
+        <input onblur="OnBlur(boardInput.value)"
+        #boardInput
+        [value]="BoardName"
         class="text-lg font-bold px-[7px] py-1 h-7 bg-transparent focus-visible:outline-none focus-visible:ring-transparent border-s-violet-100 border-2 border-r-2"
-        autofocus
         />
+        <button type="submit" class="hidden"></button> <!-- Hidden submit button -->
+
     </form>
 }
 @else {

@@ -1,0 +1,22 @@
+.board-options {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .board-options-btn {
+    background-color:transparent;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .board-options-btn:hover {
+    background-color: #026aa7;
+  }

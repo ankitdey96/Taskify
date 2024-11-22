@@ -1,0 +1,26 @@
+<div class="board-options">
+    <!-- The Board Options button -->
+    <button  class="board-options-btn" cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="ToggleMenu()">
+      <span>•••</span> <!-- This represents the options icon -->
+    </button>
+
+
+    <!-- @if(MenuOpen){ -->
+        <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="MenuOpen" >
+           <div class="pt-6 bg-white shadow-lg rounded-lg w-64 ">
+                <div class="items-center px-4 py-2 border-b border-gray-200">
+                    <h3 class="text-sm font-medium text-center text-gray-700">Menu</h3>
+
+                    <button class="text-gray-500 hover:text-gray-700 focus:outline-none top-2 right-2 p-2 absolute "  (click)="ClosePopover()">
+                        &times;
+                    </button>
+                </div>
+                <button class="bg-transparent rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm">Delete Board</button>
+              
+           </div> 
+           
+        </ng-template>
+
+    <!-- } -->
+</div>
+
