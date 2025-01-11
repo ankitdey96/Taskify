@@ -1,0 +1,46 @@
+@if (IsEditing) {
+  <div class="flex flex-col gap-y-2 items-start shrink-0 w-[300px] select-none rounded-md bg-white p-3 shadow-md" >
+    <!-- Form for Editing List -->
+    <form (submit)="OnSubmit(boardInput.value)" class="w-full">
+      <div class="flex flex-col gap-y-2">
+        <input
+          #boardInput
+          [value]="ListName"
+          (blur)="OnBlur(boardInput.value)"
+          class="text-sm px-2 py-1 h-8 font-medium border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+          placeholder="Enter List Title"
+        />
+        <div class="flex gap-2">
+          <button
+            type="submit"
+            class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+          >
+            Add List
+          </button>
+          <button
+            type="button"
+            (click)="CancelEditing()"
+            class="px-3 py-1 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition"
+          >
+            X
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+    
+}
+
+@else{
+    <li class="shrink-0 h-full w-[272px] select-none">
+        <button
+          class="w-full rounded-md bg-white/80 hover:bg-white/60 transition p-3 flex items-center font-medium text-sm"
+          (click)="ButtonEditing()"
+        >
+          <mat-icon class="h-4 w-4 mr-2">add</mat-icon>
+          Add a List
+        </button>
+      </li>
+}  
+ 

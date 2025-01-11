@@ -1,0 +1,9 @@
+<ol class="flex gap-x-3 h-full">
+    @for(item of List; track $index){
+        <app-list-item [HeaderName]="item"/>
+    }
+    <app-listform/>
+
+    <div class="flex-shrink-0 w-1">
+    </div>
+</ol>

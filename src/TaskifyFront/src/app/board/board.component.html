@@ -1,5 +1,8 @@
 <div class="relative  bg-no-repeat bg-cover bg-center  h-4/5">
     <app-board-navbar [BoardName]="item"/>
-    <main class="relative pt-28 h-4/5">
+    <main class="relative pt-12 h-4/5">
+        <div class="p-4 h-full overflow-x-auto">
+            <app-list-container [List]="BoardList"/>
+        </div>
     </main>
 </div>
