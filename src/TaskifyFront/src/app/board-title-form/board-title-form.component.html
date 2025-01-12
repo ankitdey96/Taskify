@@ -1,5 +1,3 @@
-
-
 @if (IsEditing) {
     <form  class="flex items-center gap-x-2" (submit)="OnSubmit(boardInput.value)">
         <input onblur="OnBlur(boardInput.value)"
@@ -13,5 +11,4 @@
 }
 @else {
     <button class="font-bold text-lg h-auto w-auto p-1 px-2 bg-transparent text-white hover:bg-white/20" (click)="ButtonEditing()">{{BoardName}}</button>
-
 }
