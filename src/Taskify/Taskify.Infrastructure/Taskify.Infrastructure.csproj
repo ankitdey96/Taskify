@@ -24,4 +24,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Taskify.Application\Taskify.Application.csproj" />
+    <ProjectReference Include="..\Taskify.Domain\Taskify.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
